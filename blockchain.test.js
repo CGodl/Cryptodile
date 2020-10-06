@@ -18,5 +18,21 @@ describe ('Blockchain', () => {
 
     expect(blockchain.chain[blockchain.chain.length-1].data).toEqual(newData);
   });
+
+  describe('isValidChain()', () => {
+    describe('when the chain does not start with the genesis block', () => {
+      it('returns false', () => {})
+    });
+
+    describe('when the chain does start with the genesis block and has multiple blocks', () => {
+      describe('and a lastHash reference has changed', () => {
+        it('returns false', () => {
+
+
+        });
+      });
+    });
+  });
 });
+
 
