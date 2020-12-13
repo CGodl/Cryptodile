@@ -54,17 +54,12 @@ describe ('Blockchain', () => {
 
           blockchain.chain[2].data = 'bad-data';
 
-
           expect(Blockchain.isValidChain(blockchain.chain)).toBe(false); 
-
         });
-
-
       });
 
       describe('and the chain doe not contain any invalid blocks', () => {
-        it('returns false', () => {
-
+        it('returns true', () => {
           expect(Blockchain.isValidChain(blockchain.chain)).toBe(true); 
         });
       });
