@@ -42,6 +42,9 @@ class Block {
   static adjustDifficulty({originalBlock, timestamp}) {
     const { difficulty } = originalBlock;
 
+
+    if (difficulty < 1) return 1;
+
     const difference = timestamp - originalBlock.timestamp;
 
     if (difference > GLOBAL_MINE_RATE) {
