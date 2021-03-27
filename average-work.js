@@ -23,5 +23,5 @@ for (let i = 0; i < 10000; i++) {
 
   average = times.reduce((total, num) => (total + num))/times.length;
 
-  console.log(`time to mine ${timeDiff}ms. Average time is ${average}ms`)
+  console.log(`time to mine ${timeDiff}ms. Difficulty is ${nextBlock.difficulty}. Average time is ${average}ms`)
 }
