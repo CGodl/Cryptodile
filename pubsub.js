@@ -21,7 +21,5 @@ class PubSub {
   };
 };
 
-const testPubSub = new PubSub();
-
-setTimeout(() => testPubSub.publisher.publish(CHANNELS.TEST, 'foo'), 1000);
+module.exports = PubSub;
 
