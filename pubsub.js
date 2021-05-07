@@ -25,7 +25,7 @@ class PubSub {
     const parsedMessage = JSON.parse(message);
 
     if (channel === CHANNELS.BLOCKCHAIN) {
-      history.blockchain.replaceChain(parsedMessage);
+      this.blockchain.replaceChain(parsedMessage);
     }
   };
 
