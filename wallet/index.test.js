@@ -34,7 +34,7 @@ describe('Wallet', () => {
         verifySignature({
           publicKey: wallet.publicKey,
           data,
-          signature: wallet.sign(data)
+          signature: new Wallet().sign(data)
         })
       ).toBe(false);
 
