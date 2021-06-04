@@ -47,12 +47,8 @@ class Transaction {
 
   update({senderWallet, recipient, amount}) {
     this.outputMap[recipient] = amount;
-    
     this.outputMap[senderWallet.publicKey] -= amount;
-
-    this.input = this.createInput({senderWallet, outputMap: this.outputMap})
-
-
+    this.input = this.createInput({senderWallet, outputMap: this.outputMap});
   };
 
 
