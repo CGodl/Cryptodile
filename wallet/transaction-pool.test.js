@@ -70,4 +70,12 @@ describe('TransactionPool', () => {
     })
 
   });
+
+  describe('clear()', () => {
+    it('clears the transaction', () => {
+      transactionPool.clear()
+
+      expect(transactionPool.transactionMap).toEqual({})
+    })
+  })
 });
