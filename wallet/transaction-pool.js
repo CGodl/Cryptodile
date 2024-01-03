@@ -10,6 +10,18 @@ class TransactionPool {
     this.transactionMap = {};
   }
 
+  clearBlockchainTransactions({ chain }) {
+    for (let i = 0; i<chain.length; i++) {
+      const block = chain[i]
+
+      for (let transaction of block.data) {
+        if (this.transactionMap[transaction.id]) {
+          delete this.transactionMap[transaction.id]
+        }
+      }
+    }
+  }
+
   setTransaction(transaction) {
     this.transactionMap[transaction.id] = transaction;
   };
