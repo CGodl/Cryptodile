@@ -1,6 +1,7 @@
 const Wallet = require('./index');
 const Transaction = require('./transaction')
-const {verifySignature} = require('../util')
+const {verifySignature} = require('../util');
+const Blockchain = require('../blockchain');
 
 describe('Wallet', () => {
   let wallet;
@@ -72,4 +73,12 @@ describe('Wallet', () => {
       });
     });
   });
+
+  describe('calculateBalance()', () => {
+    let blockchain;
+
+    beforeEach(() => {
+      blockchain = new Blockchain()
+    })
+  })
 });
